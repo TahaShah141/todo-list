@@ -6,16 +6,15 @@ const addButtonLogo = '<svg id="addButtonLogo" xmlns="http://www.w3.org/2000/svg
 
 function initializeBody() {
     const body = document.body;
-    
     const header = initializeHeader();
-
     const sidepane = initializeSide();
-
     const main = initializeMain();
-
     body.appendChild(header);
     body.appendChild(sidepane);
     body.appendChild(main);
+
+    backend.addProject("(Default)");
+
 }
 
 function initializeHeader() {
@@ -36,14 +35,12 @@ function initializeSide() {
 function initializeMain() {
     let main = Dom.newElement("div", "main");
 
-    let addBtn = Dom.newElement("button", "project", "add-button", "center");
-    addBtn.addEventListener("click", backend.addProject);
+    let addBtn = Dom.newElement("button", "project", "add-button");
+    addBtn.addEventListener("click", backend.openForm);
     addBtn.innerHTML = `${addButtonLogo}<p>Add Project</p>`;
 
     let projects = Dom.newElement("div", "projects-container");
-    let defaultProject = Dom.newElement("div", "project");
 
-    projects.appendChild(defaultProject);
     main.appendChild(projects);
     main.appendChild(addBtn);
     return main;

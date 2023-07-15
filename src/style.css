@@ -49,7 +49,15 @@ body {
     gap: 30px;
 }
 
+.project-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
 
+.project-button-svg {
+    height: 35px;
+}
 
 .project.add-button:hover {
     background-color: #02202b;
@@ -59,8 +67,19 @@ body {
     height: 80px;
     width: 100%;
     border: none;
-    border-radius: 20px;
-    background-color: red;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-name {
+    text-align: left;
+    margin: auto 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .project.expanded {
@@ -73,6 +92,9 @@ body {
     background-color: #0000004f;
     border: 4px dashed white;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
