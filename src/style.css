@@ -13,6 +13,7 @@
 }
 
 body {
+    overflow-x: hidden;
     display: grid;
     grid-template-rows: 100px 1fr 50px;
     height: 100vh
@@ -70,10 +71,11 @@ body {
 }
 
 .projects {
-    padding: 50px;
+    height: 100%;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: max(75px, 1fr);
+    grid-auto-rows: 75px;
     gap: 20px;
 }
 
@@ -85,6 +87,7 @@ body {
     display: grid;
     align-items: center;
     box-shadow: 3px 3px 0px red;
+    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 1.5s ease-out;
 }
 
 
@@ -110,6 +113,11 @@ body {
     transition: transform 0.1s linear;
     color: maroon;
     transform: scale(1.2);
+}
+
+.invisible {
+    transform: translateX(50px);
+    opacity: 0;
 }
 
 .add-button {

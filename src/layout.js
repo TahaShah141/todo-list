@@ -9,8 +9,6 @@ function initializeBody() {
     document.body.appendChild(header);
     document.body.appendChild(main);
     document.body.appendChild(footer);
-
-    for (let i = 0; i < 5; i++) backend.addProject("(Default)");
 }
 
 function getFooter() {
