@@ -1,6 +1,5 @@
 import "./style.css";
-import Dom from "./DomManipulate.js";
-import layout from "./layout.js";
-
+import layout from "./layout";
+import backend from "./backend";
 
 layout.initializeBody();
